@@ -17,7 +17,7 @@ class GuestActivity : AppCompatActivity() {
     }
 
     fun abrirActividad_listado(){
-        val intent = Intent(this, ListaRActivity::class.java)
+        val intent = Intent(this, ListcontratosActivity::class.java)
         //intent.putExtra("puno", "Ingresa las palabra solicitadas!!!")
         startActivityForResult(intent, 10)
     }

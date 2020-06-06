@@ -8,17 +8,21 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class GuestActivity : AppCompatActivity() {
 
+    val documento:Int = 0
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guest)
         button3.setOnClickListener { view ->
+           // val documento = editText_doc.text
             abrirActividad_listado()
         }
     }
 
     fun abrirActividad_listado(){
         val intent = Intent(this, ListcontratosActivity::class.java)
-        //intent.putExtra("puno", "Ingresa las palabra solicitadas!!!")
+        intent.putExtra("docu", documento.toInt())
         startActivityForResult(intent, 10)
     }
 

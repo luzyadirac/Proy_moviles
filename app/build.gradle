@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -34,4 +35,22 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //librerias para la BDD
+    def room_version = "2.2.1"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+
+    /* def lifecycle_version = "2.1.0"
+
+     implementation "androidx.lifecycle:lifecycle-extensions:$lifecyle_version"
+     kapt "androidx.lifecycle:lifecycle-compiler:$lifecyle_version"
+     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecyle_version"*/
+//para hacer tareas asincronas
+    def anko_version = "0.10.8"
+
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    implementation 'com.beardedhen:androidbootstrap:2.3.1'
 }

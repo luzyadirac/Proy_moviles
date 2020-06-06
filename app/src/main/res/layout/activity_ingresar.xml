@@ -13,49 +13,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/llayout"
+
         app:srcCompat="@drawable/logo_personas2" />
 
-    <LinearLayout
-        android:id="@+id/llayout"
-        android:layout_width="360dp"
-        android:layout_height="146dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+        app:layout_constraintTop_toBottomOf="@id/imageView5" />
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Correo" />
+    <EditText
+        android:id="@+id/nombreuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView15" />
 
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombreuser" />
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Contraseña" />
+    <EditText
+        android:id="@+id/passuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView16" />
 
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
-    </LinearLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/ingresar_b"
         style="@android:style/Widget.DeviceDefault.Button.Colored"
         android:layout_width="342dp"
         android:layout_height="51dp"
@@ -64,26 +67,10 @@
         android:textColorLink="#A4A4C7E3"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llayout"
         app:layout_constraintBottom_toTopOf="@id/textView17"
-        tools:layout_editor_absoluteY="373dp" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="217dp"
-        android:layout_height="22dp"
-        android:background="#333131"
-        android:fontFamily="sans-serif-light"
-        android:gravity="center_horizontal"
-        android:text="Al ingresar acepta los"
-        android:textColor="#E8C7C7"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/TyC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <TextView
         android:id="@+id/TyC"
@@ -94,8 +81,11 @@
         android:text="Terminos y condiciones"
         android:textColor="#FFE8C7C7"
         android:textSize="18sp"
+        app:bootstrapBrand="success"
+        app:fontAwesomeIcon="fa_android"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
